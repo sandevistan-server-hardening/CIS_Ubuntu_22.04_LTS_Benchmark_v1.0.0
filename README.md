@@ -57,6 +57,7 @@ Once the docker image is running and you are in the terminal do the following co
 apt update
 apt install git -y
 git clone https://github.com/sandevistan-server-hardening/CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0.git
+chmod +x -R CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
 cd CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
 ```
 
