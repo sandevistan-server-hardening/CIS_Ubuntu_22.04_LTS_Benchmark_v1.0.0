@@ -1,2 +1,4 @@
+#!/bin/bash
+
 # Hardness profile selection
-sh profile/hardnessProfileSelector.sh
+./profile/hardnessProfileSelector.sh
