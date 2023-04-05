@@ -20,25 +20,30 @@ Ubuntu 22.04 LTS or equivalent should be running as your operating system on you
 lsb_release -a
 ```
 
+if you get the error message "lsb_release: not found" run the following command:
+```
+apt-get update && apt-get install -y lsb-release && apt-get clean all
+```
+
 ### Installing
 
 In terminal navigate to this project and run the audit with this command:
 
 ```
-sh audit.sh
+./audit.sh
 
 ```
 
 The audit can also be run with arguments to define the hardness profile without prompts.
 
 ```
-sh audit.sh 1 server
+./audit.sh 1 server
 ```
 
 in this examplethe audit will test against level 1 hardness for servers.
 
 ```
-sh audit.sh 2 workstation
+./audit.sh 2 workstation
 ```
 
 in this examplethe audit will test against level 2 hardness for workstations.
@@ -54,8 +59,7 @@ docker run -it ubuntu:22.04 /bin/bash
 Once the docker image is running and you are in the terminal do the following commands to import the project:
 
 ```
-apt update
-apt install git -y
+apt update && apt install git -y && apt-get clean all
 git clone https://github.com/sandevistan-server-hardening/CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0.git
 chmod +x -R CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
 cd CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
