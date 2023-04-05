@@ -75,7 +75,7 @@ git stash && git pull && cd .. && chmod +x -R CIS_Ubuntu_22.04_LTS_Benchmark_v1.
 Tests can be run with the command.
 
 ```
-sh test.sh
+./test.sh
 ```
 
 ## Deployment
