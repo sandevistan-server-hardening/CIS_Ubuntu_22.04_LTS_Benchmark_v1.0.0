@@ -61,6 +61,10 @@ chmod +x -R CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
 cd CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
 ```
 
+This command may also be handy for active development
+```
+git stash && git pull && cd .. && chmod +x -R CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0 && cd CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
+```
 
 ## Running the tests
 

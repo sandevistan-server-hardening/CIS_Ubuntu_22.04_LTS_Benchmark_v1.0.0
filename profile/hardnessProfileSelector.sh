@@ -11,7 +11,6 @@ if [ "$args_not_present" = true ]; then
   echo "1) Level 1"
   echo "2) Level 2"
   read level
-  echo $level
 else
   level=$1
 fi
@@ -27,7 +26,6 @@ if [ "$args_not_present" = true ]; then
   echo "1) Workstation"
   echo "2) Server"
   read usetype
-  echo $usetype
 else
   usetype=$2
 fi
