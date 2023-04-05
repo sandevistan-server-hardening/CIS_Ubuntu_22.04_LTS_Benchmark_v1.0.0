@@ -1,2 +1,2 @@
 # Hardness profile selection test
-source profile/hardnessProfileSelector.test.sh
+sh profile/hardnessProfileSelector.test.sh
