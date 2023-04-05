@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Test selecting level 1 and workstation
-echo -e "1\n1" |  ./profile/hardnessProfileSelector.sh > output.txt
+printf "1\n1" |  ./profile/hardnessProfileSelector.sh > output.txt
 if ! grep "Level: Level 1" output.txt; then
   echo "Test failed: selecting level 1 and workstation"
 fi
@@ -16,7 +16,7 @@ if grep "Type: Workstation" output.txt; then
 fi
 
 # Test selecting level 1 and server
-echo -e "1\n2" | ./profile/hardnessProfileSelector.sh  > output.txt
+printf "1\n2" | ./profile/hardnessProfileSelector.sh  > output.txt
 if ! grep "Level: Level 1" output.txt; then
   echo "Test failed: selecting level 1 and server"
 fi
@@ -31,7 +31,7 @@ if grep "Type: Server" output.txt; then
 fi
 
 # Test selecting level 2 and workstation
-echo -e "2\n1" | ./profile/hardnessProfileSelector.sh  > output.txt
+printf "2\n1" | ./profile/hardnessProfileSelector.sh  > output.txt
 if ! grep "Level: Level 2" output.txt; then
   echo "Test failed: selecting level 2 and workstation"
 fi
@@ -46,7 +46,7 @@ if grep "Type: Workstation" output.txt; then
 fi
 
 # Test selecting level 2 and server
-echo -e "2\n2" | ./profile/hardnessProfileSelector.sh  > output.txt
+printf "2\n2" | ./profile/hardnessProfileSelector.sh  > output.txt
 if ! grep "Level: Level 2" output.txt; then
   echo "Test failed: selecting level 2 and server"
 fi
