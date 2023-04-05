@@ -43,6 +43,23 @@ sh audit.sh 2 workstation
 
 in this examplethe audit will test against level 2 hardness for workstations.
 
+## Development
+
+Assuming Docker is installed. These commands will fetch the official Ubuntu 22.04 Docker image and start a container:
+
+```
+docker pull ubuntu:22.04
+docker run -it ubuntu:22.04 /bin/bash
+```
+Once the docker image is running and you are in the terminal do the following commands to import the project:
+
+```
+apt update
+apt install git -y
+git clone https://github.com/sandevistan-server-hardening/CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0.git
+cd CIS_Ubuntu_22.04_LTS_Benchmark_v1.0.0
+```
+
 
 ## Running the tests
 
