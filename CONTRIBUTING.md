@@ -23,7 +23,7 @@
 > Please, don't use the issue tracker for support questions. Instead please contact the maintainers for support or ask to join our discord server.
 
 # Ground Rules
-### Set expectations for behavior (yours, and theirs).
+### General expectations:
 > Responsibilities
 > * Ensure compatibility for every change that's accepted. Ubuntu Linux 22.04.
 > * Ensure that code that get reviewed using these guidelines: https://google.github.io/styleguide/shellguide.html (best efforts) 
