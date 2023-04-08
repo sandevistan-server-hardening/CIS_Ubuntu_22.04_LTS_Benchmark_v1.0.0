@@ -20,24 +20,11 @@ echo ""
 echo "----- 1.5.2 Ensure prelink is not installed test. -----"
 echo ""
 
-# Pathing stuff
-# full_path="/1_Initial_Setup/1_5_Additional_Process_Hardening"
-# current_path=pwd
-# if [[ "$full_path" == *"$current_path"* ]]; then
-#   use_path=""
-# else
-#   use_path=$full_path
-# fi
-
 # Get the directory of the currently executing script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-echo "current path: $SCRIPT_DIR"
-# Construct the path to script2.sh relative to the directory of script1.sh
-SCRIPT2_PATH="$SCRIPT_DIR/../1_Initial_Setup/1_5_Additional_Process_Hardening"
-echo "Path to script: $SCRIPT2_PATH"
 
 # Out of the box test
-.$SCRIPT2_PATH/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
+.$SCRIPT_DIR/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
 if [[ $(grep "prelink unknown ok not-installed not-installed" output.txt) || $(grep "dpkg-query: no packages found matching prelink" output.txt) ]]; then
   echo "-->Test passed: prelink not installed out of the box"
   echo ""
@@ -49,7 +36,7 @@ fi
 
 # Detecting if prelink is installed test
 apt install prelink -y
-.$SCRIPT2_PATH/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
+.$SCRIPT_DIR/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
 if grep "prelink install ok installed    installed" output.txt; then
   echo "-->Test passed: detecting if prelink is installed"
   echo ""
@@ -60,7 +47,7 @@ fi
 
 # after prelink purge test
 apt purge prelink -y
-.$SCRIPT2_PATH/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
+.$SCRIPT_DIR/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
 if [[ $(grep "prelink unknown ok not-installed not-installed" output.txt) || $(grep "dpkg-query: no packages found matching prelink" output.txt) ]]; then
   echo "-->Test passed: prelink not installed out of the box"
   echo ""
