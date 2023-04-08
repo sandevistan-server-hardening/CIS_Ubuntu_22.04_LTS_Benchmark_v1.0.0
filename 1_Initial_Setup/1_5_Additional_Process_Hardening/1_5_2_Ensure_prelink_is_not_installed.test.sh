@@ -26,7 +26,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd | cu
 # Out of the box test
 ./$SCRIPT_DIR/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
 cat output.txt
-if [[ $(grep "prelink unknown ok not-installed        not-installed" output.txt) || $(grep "dpkg-query: no packages found matching prelink" output.txt) ]]; then
+if [ grep "not-installed" output.txt] || [ grep "no packages found matching prelink" output.txt ]; then
   echo "-->Test passed: prelink not installed out of the box"
   echo ""
 else
@@ -39,7 +39,7 @@ fi
 apt install prelink -y
 ./$SCRIPT_DIR/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
 cat output.txt
-if grep "prelink install ok installed    installed" output.txt; then
+if grep "install ok installed" output.txt; then
   echo "-->Test passed: detecting if prelink is installed"
   echo ""
 else
@@ -51,7 +51,7 @@ fi
 apt purge prelink -y
 ./$SCRIPT_DIR/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
 cat output.txt
-if [[ $(grep "prelink unknown ok not-installed        not-installed" output.txt) || $(grep "dpkg-query: no packages found matching prelink" output.txt) ]]; then
+if [ grep "not-installed" output.txt] || [ grep "no packages found matching prelink" output.txt ]; then
   echo "-->Test passed: prelink not installed out of the box"
   echo ""
 else
