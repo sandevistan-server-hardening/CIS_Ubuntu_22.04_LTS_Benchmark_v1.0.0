@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo ""
+echo "----- Audit hardness profile selection. -----"
+echo ""
+
 args_not_present=false
 if [ -z "$1" ] || [ -z "$2" ]; then
   args_not_present=true
