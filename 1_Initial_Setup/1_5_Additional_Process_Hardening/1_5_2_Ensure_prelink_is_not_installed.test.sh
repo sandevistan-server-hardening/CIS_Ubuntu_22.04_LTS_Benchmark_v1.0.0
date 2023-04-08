@@ -1,4 +1,7 @@
 #!/bin/bash
+echo ""
+echo "----- 1.5.2 Ensure prelink is not installed test. -----"
+echo ""
 
 # Out of the box test
 ./1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
