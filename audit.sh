@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir reports
+
 # Hardness profile selection
 # $1 and $2 are pass through arguments for command line selection of hardness profile
 ./profile/hardnessProfileSelector.sh $1 $2
