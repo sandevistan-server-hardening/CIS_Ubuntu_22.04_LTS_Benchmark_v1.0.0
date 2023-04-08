@@ -22,7 +22,9 @@ echo ""
 
 # Get the directory of the currently executing script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd | cut -d'/' -f3- )"
-
+echo $SCRIPT_DIR
+ls
+ls $SCRIPT_DIR
 # Out of the box test
 ./$SCRIPT_DIR/1_5_2_Ensure_prelink_is_not_installed.sh > output.txt
 if [[ $(grep "prelink unknown ok not-installed not-installed" output.txt) || $(grep "dpkg-query: no packages found matching prelink" output.txt) ]]; then
