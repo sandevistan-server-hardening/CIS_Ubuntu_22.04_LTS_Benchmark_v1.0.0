@@ -8,6 +8,7 @@ prelink_error=$(dpkg-query -W -f='${binary:Package}\t${Status}\t${db:Status-Stat
 echo "$prelink_error" > reports/1_5_2.error.txt
 dpkg-query -W -f='${binary:Package}\t${Status}\t${db:Status-Status}\n' prelink > reports/1_5_2.txt
 cat reports/1_5_2.txt
+cat reports/1_5_2.error.txt
 if [[ $(grep "not-installed" reports/1_5_2.txt) || $(grep "no packages found matching prelink" reports/1_5_2.error.txt) ]]; then
   echo "pass"
   echo ""
