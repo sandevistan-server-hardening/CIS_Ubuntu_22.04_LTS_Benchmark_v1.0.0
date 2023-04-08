@@ -54,7 +54,7 @@ Assuming Docker is installed. These commands will fetch the Sandevistan Ubuntu 2
 
 ```
 docker pull shanecfast/sandevistan-ubuntu-22.04-developer-level-0:latest
-docker run -it sandevistan-ubuntu-22.04-developer-level-0:latest /bin/bash --privileged
+docker run -it sandevistan-ubuntu-22.04-developer-level-0:latest /bin/bash
 ```
 Levels 1 and 2 will become available as development progresses for test usage. Once the docker image is running and you are in the terminal do the following commands to import the project:
 
