@@ -21,7 +21,7 @@ echo "----- 1.5.2 Ensure prelink is not installed test. -----"
 echo ""
 
 # Get the directory of the currently executing script
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd | cut -d/ -f2 )"
 ls
 ls $SCRIPT_DIR
 # Out of the box test
