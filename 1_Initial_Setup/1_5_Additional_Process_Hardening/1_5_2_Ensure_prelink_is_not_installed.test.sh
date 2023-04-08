@@ -29,3 +29,5 @@ if [[ ! $(grep "prelink unknown ok not-installed not-installed" output.txt) || !
 else
   echo "-->Test failed: prelink not installed out of the box"
 fi
+
+rm output.txt
